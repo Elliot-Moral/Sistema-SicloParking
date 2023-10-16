@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="AprendiendoJavaFx.jnlp">
+  <information>
+    <title>AprendiendoJavaFx</title>
+    <vendor>Elliot Moral</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="AprendiendoJavaFx.jar" size="304943" download="eager" />
+    <jar href="lib\Util.jar" size="11957" download="eager" />
+    <jar href="lib\itext5-itextpdf-5.5.12.jar" size="2320211" download="eager" />
+    <jar href="lib\sqlite-jdbc-3.8.11.2.jar" size="5575351" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="AprendiendoJavaFx" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="Controller.MyApp"  name="AprendiendoJavaFx" />
+  <update check="always"/>
+</jnlp>

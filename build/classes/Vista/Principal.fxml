@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="685.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PrincipalController">
+   <children>
+      <Pane prefHeight="688.0" prefWidth="312.0" style="-fx-background-color: #666;">
+         <children>
+            <Button fx:id="bnt_parqueadero" layoutX="17.0" layoutY="172.0" mnemonicParsing="false" onAction="#poner_panel" prefHeight="38.0" prefWidth="279.0" style="-fx-background-color: #6a87a1;" text="Parqueadero" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="bnt_contabilidad" layoutX="15.0" layoutY="230.0" mnemonicParsing="false" onAction="#poner_panel" prefHeight="38.0" prefWidth="279.0" style="-fx-background-color: #6a87a1;" text="Contabilidad" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="bnt_configuracion" layoutX="16.0" layoutY="289.0" mnemonicParsing="false" onAction="#poner_panel" prefHeight="38.0" prefWidth="279.0" style="-fx-background-color: #6a87a1;" text="Configuracion" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Label layoutX="103.0" layoutY="75.0" prefHeight="27.0" prefWidth="132.0" text="Hernan Morales" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="105.0" layoutY="97.0" prefHeight="27.0" prefWidth="132.0" text="Administrador" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="75.0" fitWidth="89.0" layoutX="10.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagenes/perfil_cliente.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="52.0" layoutY="641.0" prefHeight="27.0" prefWidth="132.0" text="Siclo Tecnologia" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="27.0" fitWidth="31.0" layoutX="16.0" layoutY="641.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="27.0" fitWidth="31.0" layoutX="212.0" layoutY="641.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="bnt_salir" layoutX="235.0" layoutY="641.0" mnemonicParsing="false" onAction="#salir" prefHeight="27.0" prefWidth="57.0" style="-fx-background-color: transparent;" text="Salir" textFill="WHITE" />
+         </children>
+      </Pane>
+      <AnchorPane layoutX="312.0" prefHeight="688.0" prefWidth="1009.0" style="-fx-background-color: #fff;">
+         <children>
+            <Pane fx:id="pnl_contabilidad" prefHeight="688.0" prefWidth="1009.0" style="-fx-background-color: #fff;">
+               <children>
+                  <Label layoutX="41.0" layoutY="61.0" text="Placa:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_buscar" layoutX="92.0" layoutY="63.0" prefHeight="25.0" prefWidth="238.0" />
+                  <DatePicker fx:id="filtrar_fecha" layoutX="740.0" layoutY="63.0" prefHeight="25.0" prefWidth="224.0" />
+                  <Label layoutX="601.0" layoutY="62.0" text="Filtrar Por Fecha:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="13.0" layoutY="99.0" prefHeight="515.0" prefWidth="979.0" style="-fx-background-color: #fff; -fx-border-color: #000; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+                     <children>
+                        <TableView layoutX="7.0" layoutY="5.0" prefHeight="507.0" prefWidth="963.0">
+                          <columns>
+                            <TableColumn fx:id="col_numerador" prefWidth="38.0" text="N" />
+                            <TableColumn fx:id="col_placa" prefWidth="87.0" text="Placa" />
+                              <TableColumn fx:id="col_entrada" prefWidth="100.0" text="Entrada" />
+                              <TableColumn fx:id="col_salida" prefWidth="98.0" text="Salida" />
+                              <TableColumn fx:id="col_total_horas" prefWidth="89.0" text="Total Horas" />
+                              <TableColumn fx:id="col_tarifa" prefWidth="89.0" text="Tarifa" />
+                              <TableColumn fx:id="col_tipo_vehiculo" prefWidth="113.0" text="Tipo De Vehiculo" />
+                              <TableColumn fx:id="col_color" prefWidth="73.0" text="Color" />
+                              <TableColumn fx:id="col_propietario" prefWidth="133.0" text="Propietario" />
+                              <TableColumn fx:id="col_precio" prefWidth="98.0" text="Precio" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+                  <Button fx:id="bnt_ver_reportes" layoutX="24.0" layoutY="625.0" mnemonicParsing="false" onAction="#ver_reportes" prefHeight="30.0" prefWidth="102.0" style="-fx-background-color: #6a87a1;" text="Ver Reporte" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="pnl_configuracion" prefHeight="688.0" prefWidth="1009.0" style="-fx-background-color: #AEB6BF;">
+               <children>
+                  <Pane prefHeight="145.0" prefWidth="1009.0" style="-fx-background-color: #E5E8E8;">
+                     <children>
+                        <Line endX="910.0" layoutX="99.0" layoutY="144.0" startX="-100.0" />
+                        <Label layoutX="147.0" layoutY="64.0" text="NOMBRE EMPRESA PARQUEADERO.SAS">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="93.0" fitWidth="102.0" layoutX="170.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/user.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="93.0" fitWidth="102.0" layoutX="367.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/empresa.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="93.0" fitWidth="102.0" layoutX="716.0" layoutY="339.0" onMouseClicked="#abrir_tarifas" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/tarifas.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="93.0" fitWidth="102.0" layoutX="547.0" layoutY="339.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagenes/mensualidad.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Label layoutX="182.0" layoutY="426.0" text="Usuarios">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label layoutX="546.0" layoutY="427.0" text="Mensaualidades">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label layoutX="387.0" layoutY="428.0" text="Empresa">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label layoutX="733.0" layoutY="427.0" text="Tarifas">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+               </children></Pane>
+            <Pane fx:id="pnl_parqueadero" prefHeight="688.0" prefWidth="1009.0" style="-fx-background-color: #E5E8E8;">
+               <children>
+                  <Pane layoutX="28.0" layoutY="35.0" prefHeight="119.0" prefWidth="414.0" style="-fx-background-color: #ffcc80; -fx-background-radius: 30px; -fx-border-color: #000; -fx-border-radius: 30px;">
+                     <children>
+                        <Label fx:id="label_placa" alignment="CENTER" layoutX="-3.0" layoutY="13.0" prefHeight="93.0" prefWidth="421.0" text="PLACA" textAlignment="CENTER">
+                           <font>
+                              <Font name="Baskerville Old Face" size="64.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Button fx:id="bnt_agragar" layoutX="29.0" layoutY="625.0" mnemonicParsing="false" onAction="#agregar" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #6a87a1;" text="Agregar" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bnt_modificar" layoutX="131.0" layoutY="625.0" mnemonicParsing="false" onAction="#modificar" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #6a87a1;" text="Modificar" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bnt_eliminar" layoutX="236.0" layoutY="625.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="30.0" prefWidth="85.0" style="-fx-background-color: #6a87a1;" text="Eliminar" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="bnt_despachar" layoutX="869.0" layoutY="625.0" mnemonicParsing="false" onAction="#despachar" prefHeight="30.0" prefWidth="116.0" style="-fx-background-color: #6a87a1;" text="Sacar Del Park" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Pane layoutX="13.0" layoutY="172.0" prefHeight="436.0" prefWidth="985.0" style="-fx-border-color: #000; -fx-background-radius: 15px; -fx-border-radius: 15px;">
+                     <children>
+                        <TableView fx:id="tbl_principal" layoutX="10.0" layoutY="2.0" onMouseClicked="#selecionar" prefHeight="430.0" prefWidth="963.0" style="-fx-background-color: E5E8E8;">
+                          <columns>
+                            <TableColumn fx:id="col_numeral" prefWidth="34.0" text="N" />
+                            <TableColumn fx:id="col_placa" prefWidth="118.0" text="Placa" />
+                              <TableColumn fx:id="col_entrada" prefWidth="144.0" text="Entrada" />
+                              <TableColumn fx:id="col_hora" prefWidth="144.0" text="Hora" />
+                              <TableColumn fx:id="col_tafifa" prefWidth="138.0" text="Tarifa" />
+                              <TableColumn fx:id="col_tipo_vehiculo" prefWidth="138.0" text="Tipo Vechiculo" />
+                              <TableColumn fx:id="col_color" editable="false" prefWidth="100.0" text="Color" />
+                              <TableColumn fx:id="col_nombre" prefWidth="144.0" text="Nombres" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="459.0" layoutY="29.0" prefHeight="125.0" prefWidth="538.0" style="-fx-background-color: #ECF0F1; -fx-background-radius: 30px; -fx-border-radius: 30px; -fx-border-color: #000;">
+                     <children>
+                        <Label layoutX="24.0" layoutY="5.0" prefHeight="35.0" prefWidth="74.0" text="Tiempo:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="43.0" prefHeight="35.0" prefWidth="100.0" text="Pago Total:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label_tiempo" layoutX="105.0" layoutY="6.0" prefHeight="35.0" prefWidth="279.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label_precio" layoutX="123.0" layoutY="44.0" prefHeight="35.0" prefWidth="109.0" text="0">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="85.0" prefHeight="27.0" prefWidth="57.0" text="Buscar">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="90.0" layoutY="87.0" prefHeight="25.0" prefWidth="395.0" />
+                        <Label layoutX="386.0" layoutY="31.0" prefHeight="27.0" prefWidth="85.0" text="Total Carros:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="385.0" layoutY="5.0" prefHeight="27.0" prefWidth="85.0" text="Total Motos:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="386.0" layoutY="56.0" prefHeight="27.0" prefWidth="85.0" text="Total Ciclas:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label_cantidad_carros" layoutX="475.0" layoutY="32.0" prefHeight="27.0" prefWidth="50.0" text="0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label_cantidad_motos" layoutX="475.0" layoutY="7.0" prefHeight="27.0" prefWidth="50.0" text="0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label_cantidad_ciclas" layoutX="475.0" layoutY="57.0" prefHeight="27.0" prefWidth="50.0" text="0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Button fx:id="bnt_clientes" layoutX="757.0" layoutY="626.0" mnemonicParsing="false" onAction="#gestionar_clientes" prefHeight="18.0" prefWidth="91.0" style="-fx-background-color: #6a87a1;" text="Clientes" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

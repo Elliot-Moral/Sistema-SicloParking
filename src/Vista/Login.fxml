@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="230.0" style="-fx-background-color: #6a87a1;" />
+      <Label layoutX="257.0" layoutY="42.0" text="Somos">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="376.0" layoutY="42.0" text="Siclo Part">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="262.0" layoutY="228.0" text="Contraseña" />
+      <Label layoutX="262.0" layoutY="159.0" text="Usuario" />
+      <Button fx:id="bnt_login" alignment="TOP_CENTER" layoutX="488.0" layoutY="299.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#validar_datos" style="-fx-background-color: #6a87a1;" text="Login" />
+      <TextField fx:id="txt_user" layoutX="262.0" layoutY="185.0" prefHeight="25.0" prefWidth="274.0" />
+      <Label layoutX="260.0" layoutY="105.0" text="Bienvenido!. Ingresa tus credenciales para ingresar al" />
+      <Label layoutX="257.0" layoutY="122.0" text=" mejor sistema de control de parqueadero." />
+      <PasswordField fx:id="txt_password" layoutX="262.0" layoutY="253.0" prefHeight="25.0" prefWidth="274.0" />
+   </children>
+</AnchorPane>
